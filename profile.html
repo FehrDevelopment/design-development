@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Hestia</title>
+    <title>FTR Development</title>
     <link rel="stylesheet" href="cssMain/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -30,14 +32,16 @@
             <a href="#more" class="btn">See More</a>
         </main>
         </section>
+
+       
         <section>
             <div class="box" id="box1">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt esse minima impedit earum ab voluptatum tempora necessitatibus. Ea rerum quos placeat, molestias similique eum vero, reprehenderit, quidem optio labore perferendis?</p>
-            </div>
         </section><br><br>
+       
 
-    <section id="About Me">
-        
+        <section id="About Me">
+
         <section id="fancy-bio">
             <div class="bio-container">
                 <div class="bio-image">
@@ -53,9 +57,48 @@
                 </div>
             </div>
         </section>
-        
+        <section id="Our Mission">
+        <section>
+            <div class="container-1">
+            <div class="mission-section">
+                <div class="mission-image">
+                    <img src="images/vision.webp" alt="Mission Image">
+                </div>
+                <div class="mission-text">
+                <h2>Our Mission</h2>
+                    <p class="mission-text"><strong>Empowering the Digital Frontier with Full Stack Excellence</strong><p><br>
+                    <p class="mission-text">At <strong>FTR Development</strong>, our mission is to revolutionize the digital landscape by delivering comprehensive full stack web development solutions. We are dedicated to creating cutting-edge, user-centric web applications that blend seamless functionality with striking aesthetics.</p>
+                    <p class="mission-text">Driven by a passion for innovation, our team values agility, collaboration, and continuous improvement. We are committed to providing our clients with robust, scalable, and secure solutions that meet their unique needs and exceed expectations.</p>
+                    <p class="mission-text">Our vision is to empower businesses and individuals by transforming ideas into impactful digital experiences, paving the way for a more connected and dynamic world.</p>
+                </div>
+            </div>
+        </section>
 
+        <br><br><br><br><br><br><br>
+        <footer>
+        <p>&copy; 2024 Terence Fehr. All rights reserved.</p>
+    </footer>
+    <script src="javaMain/profile.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const snowflakeCount = 50;
+          const snowflakeSymbols = ['❅', '❆', '❄'];
+      
+          for (let i = 0; i < snowflakeCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.textContent = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDelay = Math.random() * 10 + 's';
+            snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + 'em';
+            document.body.appendChild(snowflake);
+          }
+        });
+      </script>
+      
+</body>
+</html>
         
     
     
