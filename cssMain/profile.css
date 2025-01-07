@@ -1,9 +1,10 @@
-/* styles.css */
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
+    box-sizing: border-box;
     
 }
 
@@ -34,6 +35,11 @@ header.hidden{
     font-size: 1.5rem;
     font-weight: bold;
 }
+.logo-image {
+    margin-left: 100px;
+    width: 400px;
+    height: auto;
+}
 
 nav ul {
     list-style: none;
@@ -51,6 +57,45 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+
+
+
+.full-screen-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/logo.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-image {
+    display: none; 
+}
+
+.see-more-button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px; 
+    right: 35%;
+    transform: translateX(-50%);
+}
+
+.see-more-button:hover {
+    background-color: #186831;
+}
+
+
+
 
 .hero {
     background: url('../images/mountain.jpeg') no-repeat center center/cover;
@@ -110,12 +155,13 @@ nav ul li a {
     background-color: #000;
     color: white;
 }
-/* Basic styling for the bio section */
+
 #fancy-bio {
     background-color: linear-gradient(to right, #f4f4f9, #d9d9e3);
     padding: 50px 0;
     font-family: 'Arial', sans-serif;
 } 
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -129,7 +175,12 @@ nav ul li a {
     color: white;
     text-align: center;
     padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
+
 
 .container-1::after {
     content: '';
@@ -162,7 +213,7 @@ nav ul li a {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Additional styles for a polished look */
+
 .container-1 {
     display: flex;
     align-items: center;
@@ -178,6 +229,70 @@ strong {
     font-weight: bold;
     color: #3498db;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+.container-2 {
+    background: #000;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: dashed white 8px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+.main-blog h2 {
+    font-size: 2.5em;
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.main-blog h3 {
+    font-size: 1.8em;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.main-blog p {
+    font-size: 1.2em;
+    color: #3498db;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+.image-container {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+
+strong {
+    font-weight: bold;
+    color: #3498db;
+}
+
+
+.main-blog {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+
 
 
   
@@ -262,10 +377,13 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     z-index: 1000;
+}
+footer.hidden {
+    bottom: -100px;
 }
 body::before {
     content: "";
@@ -279,6 +397,85 @@ body::before {
     animation: gradientAnimation 15s ease infinite;
     z-index: -1;
 }
+
+
+#contact {
+    background-color: #f8f8f8; 
+    padding: 40px 0; 
+}
+
+.container-4 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-4 h2 {
+    font-size: 2.5em;
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-4 p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-4 form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-4 label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
 
 @keyframes snowflakes-fall {
     0% { top: -10%; }
