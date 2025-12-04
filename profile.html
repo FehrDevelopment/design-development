@@ -17,18 +17,20 @@
                     <li><a href="#Our Mission">Our Mission</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
-                   
+          
+
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <section class="hero">
-            <h1>Welcome to FTR Development!</h1>
+            <h1>FTR Development</h1>
             <p>For All Your Website Designs.</p>
-            <a href="#more" class="btn">See More</a>
+            <a href="Portfolio slideshow/portfolio.html" class="btn btn-primary">See More</a>
         </main>
         </section>
+      
 
        
         <section>
@@ -46,11 +48,11 @@
                 </div>
                 <div class="bio-content">
                     <h2>About Me:</h2>
-                    <p>Hello, my name is <strong>Terence Fehr</strong>. I am a <strong>Full Stack Web Developer</strong> based in <strong>Edmonton Alberta</strong>.</p>
-                    <p>Currently obtaining a <strong>Diploma</strong> from <strong>Robertson College</strong>.  This past <strong>1</strong> year, I've worked with <strong>multiple programming languages</strong>, where I've <strong>learned about how to build a solid foundation in HTML, CSS, JavaScript, Git/GitHub, C#, .Net and SQL.</strong>.</p>
-                    <p>My expertise includes <strong>Having strong attention to detail</strong>, <strong>Proficient in Efficiency</strong>, and <strong>Professionalism, reflecting on the quality and consistency of work.</strong>. I am particularly passionate about <strong>Front-end and Back-end operations in web development.</strong>.</p>
+                    <p>Hello, my name is <strong>Terence Fehr</strong>. I am a <strong> Junior Full Stack Web Developer</strong> based in <strong>Edmonton Alberta</strong>.</p>
+                    <p>I am in the process of obtaining a  <strong>Diploma</strong> from <strong>Robertson College</strong>. This current <strong>1</strong> year, I've worked on coursework in <strong>HTML| CSS| JavaScript |</strong>,and learning so much more to come. Where I've <strong>gained experience with Git for version control and collaborative development, i've developed a responsive website and designed a personal portfolio to showcase projects and skills</strong>.</p>
+                    <p>My expertise includes <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. I am particularly passionate about <strong>about building seamless web applications and continuously learning new technologies.</strong>.</p>
                     <p>When I'm not working, I enjoy <strong>Being outdoors</strong>, <strong>Spending time with family</strong>, and <strong>Having social friend time.</strong>. I also actively participate in <strong>Community Service or Volunteer Work</strong>.</p>
-                    <p>I am always looking to connect with like-minded professionals. Feel free to reach out to me at <strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=terence.fehr@gmail.com" target="_blank">terence.fehr@gmail.com</a></strong> or connect with me on <a href="your-linkedin-profile" target="_blank">LinkedIn</a>.</p>
+                    <p>I am always looking to connect with like-minded professionals. Feel free to reach out to me at <strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=terence.fehr@gmail.com" target="_blank">terence.fehr@gmail.com</a></strong> or connect with me on <a href="https://www.linkedin.com/in/terence-fehr-b36493128" target="_blank">LinkedIn</a>.</p>
                 </div>
             </div>
         </section>
@@ -96,9 +98,9 @@
             <section class="container-4">
                 <h2>Contact Us</h2>
                 <p>If you have any questions, please fill out the form below and we'll get back to you as soon as possible.</p>
-                <form action="submit_form.php" method="POST">
+                <form id="contact-form">
                     <div class="form-group">
-                        <labe; for="name">Name:</lable>
+                        <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
@@ -112,7 +114,7 @@
                     <button type="submit">Submit</button>
                 </form>
                 <div class="contact-info">
-                    <p><strong>Email:</strong> ftrdev.design@gmail.com</p>
+                    <p><strong>Email:</strong> fehrdevelopment@gmail.com</p>
                     <p><strong>Phone:</strong> (587) 930-0994</p>
                     <p><strong>Address:</strong> Edmonton Alberta, T5W 4H6</p>
                 </div>
@@ -122,13 +124,37 @@
 
         <br><br><br><br><br><br><br>
         <footer>
-        <p>&copy; 2024 Terence Fehr. All rights reserved.</p>
+        <p>&copy; 2024 FTR Development. All rights reserved.</p>
     </footer>
-    <script src="javaMain/profile.js"></script>
+    
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector("input[name='name']").value.trim();
+    const email = form.querySelector("input[name='email']").value.trim();
+    const message = form.querySelector("textarea[name='message']").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
+
+    const subject = encodeURIComponent("New message from your site");
+    const body = encodeURIComponent("Hello FTR Development, i'd like to know more about your services.");
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    ;
+
+    // This opens user's default email client or Gmail if configured
+    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=terence.fehr@gmail.com&su=${subject}&body=${body}`;
+  });
+});
         document.addEventListener('DOMContentLoaded', function() {
-          const snowflakeCount = 5;
+          const snowflakeCount = 14;
           const snowflakeSymbols = ['❅', '❆', '❄'];
       
           for (let i = 0; i < snowflakeCount; i++) {
@@ -142,7 +168,7 @@
           }
         });
       </script>
-      
+      <script src="javaMain/profile.js" ></script>
 </body>
 </html>
     
@@ -174,3 +200,4 @@
 
 
     
+
