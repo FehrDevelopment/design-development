@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cssMain/portfolio.css">
+    <title>Slide Show</title>
+    <header>
+        <div class="projects">
+            <h1>Portfolio Slide Show</h1>
+        </div>
+    </header>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="/images/terence pic.png" style="width:30%">
+        </div>
+        <div class="mySlides fade">
+            <img src="/images/mountain.jpeg" style="width:70%">
+        </div>
+        <div class="mySlides fade">
+            <img src="/images/digital fronier.jpeg" style="width:80%">
+        </div>
+        <div class="mySlides">
+            <img src="/images/vision.webp" style="width:80%">
+
+            <p class="">Hello</p>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3500); // Change image every 2 seconds
+        }
+    </script>
+    
+    
+    
+</body>
+</html>
