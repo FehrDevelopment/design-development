@@ -1,0 +1,35 @@
+.projects h1 {
+    text-align: center;
+    margin-top: 20px;   
+
+    font-size: 36px;
+    color: blue;
+
+}
+.projects {
+    text-align: center;
+    margin-bottom: 20px;
+}
+ .slideshow {
+    position: relative; /* Position the slideshow relative to the top */
+    top: 0; /* Set it at the top of the page */
+    align-items: center;
+    width: 100%; /* Make it span the full width */
+    max-width: 100%; /* Optional: cap the maximum width */
+    margin: auto; /* Center the slideshow */
+    z-index: 10; /* Ensure the slideshow stays above other content */
+  }
+  
+  .slide {
+    display: none; /* Hide all slides by default */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto; /* Make images responsive */
+  }
+  
+  /* Display the first slide by default */
+  .slideshow .slide:first-child {
+    display: block;
+  }
