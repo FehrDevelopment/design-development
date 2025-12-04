@@ -1,52 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/cssMain/portfolio.css">
-    <title>Slide Show</title>
-    <header>
-        <div class="projects">
-            <h1>Portfolio Slide Show</h1>
-        </div>
-    </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Packages</title>
+  <!-- Keep using your existing portfolio.css -->
+  <link rel="stylesheet" href="cssMain/portfolio.css">
 </head>
 <body>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="/images/terence pic.png" style="width:30%">
-        </div>
-        <div class="mySlides fade">
-            <img src="/images/mountain.jpeg" style="width:70%">
-        </div>
-        <div class="mySlides fade">
-            <img src="/images/digital fronier.jpeg" style="width:80%">
-        </div>
-        <div class="mySlides">
-            <img src="/images/vision.webp" style="width:80%">
+  <header>
+    <h1>Services & Packages</h1>
+    <p>Choose the plan that fits your project needs</p>
+    <img src="images/FTR.png" alt="FTR Logo" class="logo">
+  </header>
 
-            <p class="">Hello</p>
-        </div>
+  <section class="services">
+    <div class="card">
+      <h3>Starter Package</h3>
+      <p class="price">$299</p>
+      <ul>
+        <li>Basic website setup</li>
+        <li>Responsive design</li>
+        <li>Email support</li>
+      </ul>
+      <a href="#contact" class="btn" data-package="Starter">Get Started</a>
     </div>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
+    <div class="card">
+      <h3>Professional Package</h3>
+      <p class="price">$799</p>
+      <ul>
+        <li>Custom design</li>
+        <li>Secure payment integration</li>
+        <li>SEO optimization</li>
+        <li>Priority support</li>
+      </ul>
+      <a href="#contact" class="btn" data-package="Professional">Choose Plan</a>
+    </div>
 
-        function showSlides() {
-            let i;
-            const slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3500); // Change image every 2 seconds
-        }
-    </script>
-    
-    
-    
+    <div class="card">
+      <h3>Premium Package</h3>
+      <p class="price">$1499</p>
+      <ul>
+        <li>Full-stack development</li>
+        <li>Advanced e-commerce features</li>
+        <li>Brand-focused design</li>
+        <li>Ongoing maintenance</li>
+      </ul>
+      <a href="#contact" class="btn" data-package="Premium">Work With Me</a>
+    </div>
+  </section>
+
+  <section>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="package">Selected Package:</label>
+      <input type="text" id="package" name="package" readonly>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <section>
+    <p>Thank you for your business.</p>
+    <footer>
+      <p>&copy; 2025 FTR Development. All rights reserved.</p>
+    </footer>
+  </section>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+
+  // --- Package button logic ---
+  document.querySelectorAll('.btn[data-package]').forEach(button => {
+    button.addEventListener('click', function () {
+      const selected = this.getAttribute('data-package');
+      const packageField = document.getElementById('package');
+      if (packageField) {
+        packageField.value = selected;
+      }
+    });
+  });
+
+  // --- Form submission logic ---
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector("input[name='name']").value.trim();
+    const email = form.querySelector("input[name='email']").value.trim();
+    const packageName = form.querySelector("input[name='package']").value.trim();
+    const message = form.querySelector("textarea[name='message']").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
+
+    const subject = encodeURIComponent("New message from your site");
+    const body = encodeURIComponent(
+      `Hello FTR Development, I'd like to know more about your services.\n\n` +
+      `Name: ${name}\nEmail: ${email}\nPackage: ${packageName}\n\nMessage:\n${message}`
+    );
+
+    window.location.href =
+      `https://mail.google.com/mail/?view=cm&fs=1&to=terence.fehr@gmail.com&su=${subject}&body=${body}`;
+  });
+});
+</script>
 </body>
 </html>
