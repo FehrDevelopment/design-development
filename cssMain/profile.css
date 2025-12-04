@@ -9,7 +9,7 @@ body, html {
 }
 
 header {
-    width: 100%;
+    max-width: 100%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 1rem 0;
@@ -22,6 +22,13 @@ header {
 header.hidden{
     top:-100px;
 }
+body {
+    margin: 0; /* Remove default margin to ensure the slideshow starts at the top */
+    padding: 0;
+  }
+
+
+  
 
 .container {
     display: flex;
@@ -29,27 +36,39 @@ header.hidden{
     align-items: center;
     width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
+    
+}
+
+nav {
+    flex-grow: 1;
+    
 }
 
 .logo {
+    
     font-size: 1.5rem;
     font-weight: bold;
 }
 .logo-image {
-    margin-left: 100px;
-    width: 400px;
-    height: auto;
+  margin-left: 0;
+  max-width: 100%;
+  height: auto;
 }
 
+
 nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0 6rem;
 }
 
 nav ul li a {
@@ -84,10 +103,12 @@ nav ul li a {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     bottom: 20px; 
-    right: 35%;
-    transform: translateX(-50%);
+    right: auto;
+    transform: none;
+    display: block;
+    margin: 20px auto;
 }
 
 .see-more-button:hover {
@@ -235,10 +256,10 @@ strong {
 
 
 .container-2 {
-    background: #000;
+    background: #958383;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: dashed white 8px;
+
     max-width: 900px;
     margin: 40px auto;
 }
@@ -246,7 +267,7 @@ strong {
 
 .main-blog h2 {
     font-size: 2.5em;
-    color: #3498db;
+    color: #f6fafc;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -262,7 +283,7 @@ strong {
 
 .main-blog p {
     font-size: 1.2em;
-    color: #3498db;
+    color: #8999a3;
     margin-bottom: 20px;
     line-height: 1.7;
 }
@@ -274,7 +295,7 @@ strong {
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+ 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
@@ -282,13 +303,13 @@ strong {
 
 strong {
     font-weight: bold;
-    color: #3498db;
+    color: #141c21;
 }
 
 
 .main-blog {
     text-align: left;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(77, 74, 74, 0.7);
     margin: 0;
 }
 
@@ -331,6 +352,8 @@ strong {
     background-color: #fff;
 }
 
+
+
 .bio-content h2 {
     margin-top: 0;
     font-size: 32px;
@@ -370,7 +393,9 @@ strong {
 
 .btn:hover {
     background-color: #d62828;
+    color: blue; 
 }
+
 
 footer {
     background: rgba(0, 0, 0, 0.7);
@@ -508,3 +533,70 @@ button:hover {
     animation: snowflakes-fall 12s linear infinite, snowflakes-shake 5s ease-in-out infinite;
   }
   
+  
+@media (max-width: 768px) {
+  .container,
+  .container-1,
+  .container-2,
+  .container-4,
+  .bio-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo-image {
+    margin-left: 0;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .see-more-button {
+    right: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .bio-content {
+    padding: 20px;
+  }
+
+  .main-blog h2,
+  .main-blog h3 {
+    font-size: 1.5em;
+  }
+
+  .container-4 h2 {
+    font-size: 2em;
+  }
+
+  .container-4 p {
+    font-size: 1em;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 1em;
+  }
+}
+
