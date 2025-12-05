@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +8,11 @@
   <link rel="stylesheet" href="cssMain/portfolio.css">
 </head>
 <body>
-  <header>
-    <h1>Services & Packages</h1>
-    <p>Choose the plan that fits your project needs</p>
-    <img src="images/FTR.png" alt="FTR Logo" class="logo">
-  </header>
+<header>
+    <div class="star-container"></div>
+  <h1>Services & Packages</h1>
+  <img src="images/Untitled design (16).png" alt="FTR Development Logo" class="logo-image">
+</header>
 
   <section class="services">
     <div class="card">
@@ -135,6 +134,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function launchStar() {
+  const star = document.createElement("div");
+  star.className = "star";
+  star.style.top = Math.random() * 100 + "px";
+  star.style.left = Math.random() * window.innerWidth + "px";
+  document.querySelector(".star-container").appendChild(star);
+  setTimeout(() => star.remove(), 5000);
+}
+
+// Launch stars every 1.5 seconds
+setInterval(launchStar, 10);
+
 </script>
+<script src="javaMain/profile.js"></script>
 </body>
 </html>
