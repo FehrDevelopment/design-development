@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let particles = [];
 
   function createFirework(x, y) {
-    const colors = ["#ff0043", "#14fc56", "#1e90ff", "#ffff00"];
-    for (let i = 0; i < 50; i++) {
+    const colors = ["#222222", "#333333", "#444444", "#ffff00"];
+    for (let i = 0; i < 80; i++) {
       particles.push(new Particle(x, y, colors[Math.floor(Math.random() * colors.length)]));
     }
   }
@@ -113,7 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const y = random(100, canvas.height - 100);
       setTimeout(() => createFirework(x, y), i * 300); // stagger bursts
     }
-  }, 6000); // delay matches typing duration
+  }, 9000); // delay matches typing duration
 });
+
 
 
