@@ -54,6 +54,7 @@
 
   <section>
     <form id="contact-form">
+        <p>Please fill out your information and we will get back to you shortly.</p>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -77,6 +78,7 @@
   </section>
 
   <script>
+    
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
 
@@ -115,6 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
       `https://mail.google.com/mail/?view=cm&fs=1&to=terence.fehr@gmail.com&su=${subject}&body=${body}`;
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transition = "all 0.3s ease";
+      card.style.transform = "scale(1.05)";
+      card.style.boxShadow = "0 8px 20px rgba(0, 119, 204, 0.6)";
+    });
+    
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "scale(1)";
+      card.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
+    });
+  });
+});
+
 </script>
 </body>
 </html>
