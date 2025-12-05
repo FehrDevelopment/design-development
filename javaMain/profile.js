@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const y = random(100, canvas.height - 100);
       setTimeout(() => createFirework(x, y), i * 300); // stagger bursts
     }
-  }, 3000); // delay matches typing duration
+  }, 6000); // delay matches typing duration
 });
+
 
