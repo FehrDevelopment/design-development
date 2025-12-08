@@ -17,7 +17,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: top 0.3s;
+    transition: top 0.4s ease;
 }
 header.hidden{
     top:-100px;
@@ -763,5 +763,10 @@ button:hover {
   .btn {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
+  }
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
   }
 }
