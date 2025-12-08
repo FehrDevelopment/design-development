@@ -254,29 +254,70 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: white;
     z-index: 1;
 }
-
-.mission-section {
-    position: relative;
-    z-index: 2;
+.mission-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80vh;
+    background: grey;
+  color: white;
+  position: relative;
+  border-radius: 20px;
 }
 
-.mission-text h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    color: #000;
-    font-weight: bold;
+.mission-image {
+  flex: 1;
+  min-width: 200px;
+  overflow: hidden;
+  position: relative;
+
 }
 
-.mission-text p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;    
+  
 }
+
+
+.mission-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  border-radius: 40px;
+}
+.mission-content h2 {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  text-shadow: 0 0 10px black, 0 0 20px black;
+  animation: pulseGlow 1s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    text-shadow: 0 0 5px darkgrey, 0 0 10px white;
+  }
+  to {
+    text-shadow: 0 0 20px darkgrey, 0 0 40px white;
+  }
+}
+
+
+.mission-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 20px;
+  color: #000
+}
+
 
 
 .container-1 {
@@ -286,9 +327,6 @@ nav ul li a {
     min-height: 100vh;
 }
 
-.mission-text {
-    max-width: 800px;
-}
 
 strong {
     font-weight: bold;
@@ -300,11 +338,11 @@ strong {
 
 
 .container-2 {
-    background: #958383;
+    background:  grey;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    max-width: 900px;
+    border-radius: 50px;
+    max-width: 1000spx;
     margin: 40px auto;
 }
 
@@ -319,7 +357,7 @@ strong {
 
 .main-blog h3 {
     font-size: 1.8em;
-    color: white;
+    color: black;
     margin-top: 30px;
     margin-bottom: 15px;
     text-align: center;
@@ -327,7 +365,7 @@ strong {
 
 .main-blog p {
     font-size: 1.2em;
-    color: #8999a3;
+    color: #f6fafc;
     margin-bottom: 20px;
     line-height: 1.7;
 }
@@ -335,10 +373,13 @@ strong {
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
     margin-bottom: 20px;
+    border-radius: 20px;
 }
 .image-container img {
     width: 100%;
     height: auto;
+    border-radius: 20px;
+    
  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
@@ -355,6 +396,7 @@ strong {
     text-align: left;
     background: rgba(77, 74, 74, 0.7);
     margin: 0;
+    border-radius: 40px;
 }
 
 
@@ -387,7 +429,7 @@ strong {
 .bio-image img {
     width: 100%;
     height: auto;
-    border-radius: 15%;
+    border-radius: 90px;
 }
 
 .bio-content {
@@ -411,7 +453,7 @@ strong {
 }
 
 .bio-content a {
-    color: #007BFF;
+    color: #3498db;
     text-decoration: none;
 }
 
@@ -487,6 +529,7 @@ body::before {
     color: #3498db;
     text-align: center;
     margin-bottom: 20px;
+    border-radius: 49px;
 }
 
 .hero-text {
