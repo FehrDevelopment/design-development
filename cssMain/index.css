@@ -57,14 +57,10 @@ nav {
 
 
 nav ul {
-    display: flex;
-    gap: 0.2rem;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding-left: 35px;
-    margin: 0;
-    
+  display: flex;
+  flex-direction: row;   /* force horizontal */
+  flex-wrap: nowrap;     /* prevent wrapping */
+  justify-content: space-around; /* spread items */
 }
 
 nav li {
