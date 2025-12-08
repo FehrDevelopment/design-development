@@ -8,6 +8,11 @@
   margin: auto;
 }
 
+li:hover {
+  color: #0077cc; /* change to a blue shade on hover */
+  cursor: pointer;
+} 
+
 header {
   display: flex;
   justify-content: space-between; /* pushes content apart */
@@ -111,20 +116,25 @@ section.services {
 .star {
   position: absolute;
   width: 2px;
-  height: 2px;
-  background: white;
+  height: 4px;
+  background: linear-gradient(white, rgba(255, 255, 255, 0));
   box-shadow: 0 0 6px white;
   animation: shoot 1s linear forwards;
 }
 
+
+
 @keyframes shoot {
   0% {
     transform: translate(0, 0);
-    opacity: 1;
+    opacity: 2;
+    
   }
   100% {
     transform: translate(300px, 100px);
     opacity: 0;
   }
+  
 }
+
 
