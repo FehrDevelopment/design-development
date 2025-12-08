@@ -766,3 +766,8 @@ button:hover {
     flex-direction: column;
   }
 }
+@media (max-width: 480px) {
+  nav ul li {
+    margin: 5px 0;
+  }
+}
