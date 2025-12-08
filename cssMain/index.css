@@ -769,5 +769,6 @@ button:hover {
 @media (max-width: 480px) {
   nav ul li {
     margin: 5px 0;
+    flex-direction: column
   }
 }
