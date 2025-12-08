@@ -693,3 +693,75 @@ button:hover {
     font-size: 1em;
   }
 }
+/* Tablet and smaller */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    position: static;   /* prevent overlap */
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .logo-image {
+    width: 150px;
+    margin-right: 0;
+  }
+
+  .services {
+    grid-template-columns: 1fr; /* single column */
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .star-container {
+    height: 100px; /* shrink star area */
+  }
+
+  .star {
+    width: 1px;
+    height: 3px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* scale down base font */
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
