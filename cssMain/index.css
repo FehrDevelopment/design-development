@@ -766,7 +766,7 @@ button:hover {
     flex-direction: column;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   nav ul li {
     margin: 5px 0;
     flex-direction: column
