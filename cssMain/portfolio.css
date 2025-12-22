@@ -189,4 +189,73 @@ section.services {
   }
 }
 
+/* MOBILE RESPONSIVE FIXES */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .logo-image {
+    width: 140px;
+    margin: 0 auto 1rem;
+  }
+
+  /* Remove absolute positioning on mobile */
+  .logo {
+    position: static;
+    width: 120px;
+    height: auto;
+    margin: 0 auto 1rem;
+  }
+
+  /* SERVICES GRID */
+  .services {
+    grid-template-columns: 1fr; /* single column */
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  /* CARDS */
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  /* BUTTON */
+  .btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  /* STAR ANIMATION */
+  .star-container {
+    height: 80px; /* reduce height so it doesn't overlap content */
+  }
+
+  .star {
+    width: 1px;
+    height: 3px;
+  }
+
+  /* BODY */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+
 
