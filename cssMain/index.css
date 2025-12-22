@@ -295,6 +295,9 @@ nav ul li a {
   text-align: center;
   text-shadow: 0 0 10px black, 0 0 20px black;
   animation: pulseGlow 1s infinite alternate;
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 
 @keyframes pulseGlow {
@@ -309,7 +312,7 @@ nav ul li a {
 
 .mission-content p {
   margin-bottom: 15px;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 20px;
   color: #000
 }
@@ -348,6 +351,9 @@ strong {
     color: #f6fafc;
     text-align: center;
     margin-bottom: 20px;
+     text-shadow: 0 0 10px black, 0 0 20px black;
+     
+  animation: pulseGlow 1s infinite alternate;
 }
 
 
@@ -437,9 +443,16 @@ strong {
 
 
 .bio-content h2 {
-    margin-top: 0;
-    font-size: 32px;
-    color: #333;
+    margin-top: -15px;
+    font-weight:bolder;
+    font-size: 55px;
+    color: #020000;
+      transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+     text-shadow: 50 50 70px rgb(10, 1, 1), 0 0 70px rgb(20, 1, 1);
+  animation: pulseGlow 1s infinite alternate;
+  border-radius: 8px;
 }
 
 .bio-content p {
@@ -622,6 +635,34 @@ button:hover {
   .snowflake:nth-of-type(even) {
     animation: snowflakes-fall 12s linear infinite, snowflakes-shake 5s ease-in-out infinite;
   }
+
+  #thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: #f5f5f5;
+  margin: 40px 0;
+  position: relative;
+}
+
+.thank-you-box {
+  background-color: #008080;
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.thank-you-box:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
   
   
 @media (max-width: 768px) {
@@ -772,4 +813,125 @@ button:hover {
     flex-direction: column
   }
 }
+
+
+/* UNIVERSAL MOBILE FIX — CLEAN + CONSISTENT */
+@media (max-width: 768px) {
+
+  /* HEADER + NAV */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* LOGO */
+  .logo,
+  .logo-image {
+    position: static;
+    margin: 0 auto 1rem;
+    width: 150px;
+    height: auto;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+    width: 100%;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+
+  .see-more-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  /* MISSION SECTION */
+  .mission-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .mission-content h2 {
+    font-size: 2rem;
+  }
+
+  .mission-content p {
+    font-size: 1rem;
+  }
+
+  /* BIO SECTION */
+  .bio-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .bio-content h2 {
+    font-size: 2rem;
+  }
+
+  .bio-content p {
+    font-size: 1rem;
+  }
+
+  /* BLOG */
+  .main-blog h2 {
+    font-size: 1.8rem;
+  }
+
+  .main-blog h3 {
+    font-size: 1.3rem;
+  }
+
+  /* CONTACT */
+  .container-4 {
+    padding: 20px;
+  }
+
+  .container-4 h2 {
+    font-size: 1.8rem;
+  }
+
+  .container-4 p {
+    font-size: 1rem;
+  }
+
+  /* BUTTONS */
+  button,
+  .btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  /* GENERAL */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+
 
