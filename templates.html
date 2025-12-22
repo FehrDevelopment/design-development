@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssMain/templates.css">
+
+    <title>Website Templates</title>
+</head>
+<body>
+    
+     <header>
+  <section id="navbar" class="navbar" aria-label="navigation">
+    <nav>
+      <ul>
+        <li><a href="#TINA'S COFFEE SHOP">TINA'S COFFEE SHOP</a></li>
+        <li><a href="#JERRY'S ON THE FLY">JERRY'S ON THE FLY</a></li>
+        <li><a href="#JUAN'S COFFEE STOP">JUAN'S COFFEE STOP</a></li>
+        <li><a href="#SHIRLEY'S ROAST">SHIRLEY'S ROAST</a></li>
+      </ul>
+    </nav>
+  </section>
+</header>
+<div class="wave-divider"></div>
+    <section id="SHIRLEY'S ROAST">
+  <div class="template-card">
+    <img src="/images/Coffee pics2.avif" alt="Coffee template preview" class="template-image">
+<h1>SHIRLEY'S ROAST CAFE</h1>
+    
+    <p class="template-text">
+        <p>Welcome to Shirley's Roast Cafe.  We serve a variety of blended roasts with an experienced pour.  Come stop in to try our signature roasts. </p>
+   <a href="shirleysRoast.html" class="btn btn-primary">Exceeding excellence in blended roasts.</a>
+  </div>
+  <br>
+  <br>
+  
+  <blockquote class="quote">
+  “A good website is like a good cup of coffee — bold, smooth, and unforgettable.”
+</blockquote>
+  
+  
+  
+    <section id="JUAN'S COFFEE SPOT">
+  <div class="template-card">
+    <img src="/images/Coffee pics3.jpeg" alt="Coffee template preview" class="template-image">
+    <h1>JUAN'S COFFEE SPOT</h1>
+    <p class="template-text">
+    <p>Blended coffee beans from around the world! Come in to try our new Columbia Blend.</p>
+    <a href="#But First Lets Have Coffee!" class="btn btn-primary">You should probably view me... But first coffee!!</a>
+  </div>
+
+
+   <blockquote class="quote">
+  “Great code is like great espresso — strong and clean."
+</blockquote>
+
+
+      <section id="JERRY'S ON THE FLY">
+  <div class="template-card">
+    <img src="/images/Coffee pics.jpeg" alt="template cards" class="template-image">
+    <h1>JERRY'S ON THE FLY </h1>
+    <p class="template-text">
+    <p>Jerry's on the fly is a local hot spot.  Award winning cafe for there latte art, and years of service.  Come stop in to see your Latte come to life.</p>
+    <a href="#But First Lets Have Coffee!" class="btn btn-primary">You should probably view me... But first coffee!!</a>
+  </div>
+
+   <blockquote class="quote">
+  “Great code is like great espresso — strong and clean."
+</blockquote>
+
+
+      <section id="TINA'S COFFEE SHOP">
+  <div class="template-card">
+    <img src="/images/Law pics2.jpg" alt="coffee law office " class="template-image">
+    <h1>TINA'S COFFEE SHOP</h1>
+    <p class="template-text">
+    <p>Welcome to Tina's coffee shop.  We encourage all guests to try are trio delight of an assortment of seasonal blends that smell like heaven and taste like victor</p>
+    <a href="#But First Lets Have Coffee!" class="btn btn-primary">You should probably view me... But first coffee!!</a>
+  </div>
+</body>
+<br>
+<br>
+<br>
+<section class="info-panel">
+  <h3>Types of Beans</h3>
+  <p>Arabica, Robusta, Liberica — each with unique flavor profiles and caffeine levels.</p>
+  <button onclick="addBeanFact()">More Bean Info</button>
+  <div id="bean-facts"></div>
+</section>
+
+<section class="info-panel">
+  <h3>Brewing Tips</h3>
+  <p>Use fresh water, grind just before brewing, and experiment with ratios for perfect flavor.</p>
+  <button onclick="addBrewTip()">More Brewing Tips</button>
+  <div id="brew-tips"></div>
+</section>
+
+
+
+
+<div id="quote-box"></div>
+<button onclick="newQuote()">Get Quote</button>
+
+<script>
+  const quotes = [
+    "A good website is like a good cup of coffee — bold and smooth.",
+    "Design is intelligence made visible.",
+    "Great code is like great espresso — strong and clean."
+  ];
+
+  function newQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote-box").innerText = quotes[randomIndex];
+  }
+
+  // Show one on page load
+  newQuote();
+</script>
+<script>
+  const beanFacts = [
+    "Arabica beans are sweeter and more aromatic.",
+    "Robusta beans have twice the caffeine of Arabica.",
+    "Liberica beans are rare and have a floral aroma.",
+    "Dark roast doesn't mean more caffeine — it's actually less!"
+  ];
+
+  const brewTips = [
+    "Use a burr grinder for consistent grind size.",
+    "Water temperature should be around 195–205°F.",
+    "Let your coffee bloom for better flavor.",
+    "Try the 1:16 coffee-to-water ratio for balance."
+  ];
+
+  let beanIndex = 1;
+  let brewIndex = 0;
+
+  function addBeanFact() {
+    if (beanIndex < beanFacts.length) {
+      const div = document.getElementById("bean-facts");
+      const p = document.createElement("p");
+      p.textContent = beanFacts[beanIndex++];
+      div.appendChild(p);
+    }
+  }
+
+  function addBrewTip() {
+    if (brewIndex < brewTips.length) {
+      const div = document.getElementById("brew-tips");
+      const p = document.createElement("p");
+      p.textContent = brewTips[brewIndex++];
+      div.appendChild(p);
+    }
+  }
+</script>
+</html>
