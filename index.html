@@ -4,26 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FTR Development</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
     <link rel="stylesheet" href="cssMain/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
+  <div class="container">
+    <!-- Hamburger button on the left -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-            <nav>
-                <ul>
-                    <li><a href="#Introduction">Introduction</a></li>
-                    <li><a href="#Our Mission">Our Mission</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="services.html">Services</a></li>
-          
+    <!-- Logo next to it -->
 
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+    <!-- Collapsible nav links -->
+
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="#fancy-bio">Introduction</a></li>
+    <li><a href="#OurMission">Our Mission</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="services.html">Services</a></li>
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+
+
+
+   
     <main>
         <section class="hero">
             <img src="images/Untitled design (16).png" alt="FTR Development Logo" class="logo-image">
@@ -50,26 +72,60 @@
                 </div>
                 <div class="bio-content">
                     <h2>Introduction:</h2>
-                    <p>Hello, my name is <strong>Terence Fehr</strong>.  I am a Junior Full Stack Web Developer based in Edmonton Alberta.</p>
-                    <p>Graduating with honors and obtaining a diploma from Robertson College.  This current year, gaining confident skills in HTML | CSS | JavaScript | C# | .NET | Git/Github | ASP.NET | SQL |. This year of learning and practicing different languages within my course I have learned | Business Communication| Introduction to IT | Structured Programming in Java | Introduction to JavaScript | Testing and Quality Assurance | Web Development | Version Control with Git and Github | Inheritance and Polymorphism | Front End Frameworks | Relational Databases & SQL | Object-Oriented Programming |  I've gained experience with Git for version control and collaborative development. I have developed this website to connect with like minded people who require these services that FTR offers.</p>
-                    <p>I am particularly passionate about building seamless web applications and continuously learning new technologies.</p>
-                    <p>When I'm not working, I enjoy practicing coding and learning new methods to improve my abilities.  I also enjoy being outdoors, spending time with family, and having social friend time.  Enjoying nature and spending my time outside.</p>
-                    <p>I am always looking to connect with like-minded professionals. Feel free to reach out to me at <strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=terence.fehr@gmail.com" target="_blank">terence.fehr@gmail.com</a></strong> or connect with me on <a href="https://www.linkedin.com/in/terence-fehr-b36493128" target="_blank">LinkedIn</a>.</p>
+
+                    <p>
+                        Hello, my name is Terence Fehr. Earning my full‑stack diploma with honors has been a long‑time dream, and achieving it has been one of the most meaningful milestones in my life. Over the past year, I’ve immersed myself in both front‑end and back‑end development—pushing boundaries, overcoming challenges, and growing through every step of the journey. I’m a hands‑on learner who thrives on discovering new concepts and putting them into practice. With each project, I gain more confidence, skill, and passion for the craft. I’m currently based in Edmonton, Alberta.
+                    </p>
+
+                    <p>
+                        Throughout my studies, I’ve built strong skills in HTML, CSS, JavaScript, C#, .NET, Git/GitHub, ASP.NET, and SQL. I’ve also completed coursework in Business Communication, IT fundamentals, Java programming, JavaScript, Testing and Quality Assurance, Web Development, Version Control, Inheritance and Polymorphism, Front‑End Frameworks, Relational Databases, and Object‑Oriented Programming. These experiences have given me a solid foundation in both development and collaborative workflows. I created this website to connect with like‑minded individuals and businesses who want to elevate their online presence or build a fully customized, functional website from the ground up.
+                    </p>
+
+                    <!-- TOP + BOTTOM SPLIT PARAGRAPH -->
+                    <p class="bio-para">
+                        <span class="bio-top">
+                            I’m especially passionate about building seamless, user‑friendly web applications and helping people bring their ideas to life. I love creating clean, organized, and visually appealing digital experiences—and I always aim to have fun throughout the process.
+                        </span>
+
+                        <span class="bio-bottom">
+                            I’m continuously learning new techniques to write better code and refine my craft.
+                        </span>
+                    </p>
+
+                    <p>
+                        When I’m not coding, I enjoy spending time with my loved ones, practicing mindfulness, and taking life one day at a time. I also love being outdoors—whether I’m skating, relaxing in nature, or spending time with friends. Nature is my escape; it helps me reset, refocus, and recharge for the work ahead.
+                    </p>
+
+                    <p>
+                        I’m always open to connecting with like‑minded professionals. Feel free to reach out at 
+                        <strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=terence.fehr@gmail.com" target="_blank">terence.fehr@gmail.com</a></strong> 
+                        or connect with me on 
+                        <a href="https://www.linkedin.com/in/terence-fehr-b36493128" target="_blank">LinkedIn</a>.
+                    </p>
                 </div>
+                <div class="clear">
+
+                    <i class="fa-solid fa-f fa-bounce" style="color: #63E6BE;"></i>
+
+
+
+                </div>
+
             </div>
         </section>
-        <section id="Our Mission">
+        <section id="OurMission">
 <section class="mission-wrapper">
   <div class="mission-image">
     <img src="/images/Landscape.webp" alt="FTR Development Mission">
   </div>
   <div class="mission-content">
     <h2>Our Mission:</h2>
-    <p>Empowering the Digital Frontier with Full Stack Excellence:</p>
+
     <p>
-        At <strong>FTR Development</strong>, our mission is to revolutionize the digital landscape.
+        At FTR, our mission is to revolutionize the digital landscape.
         Driven by a passion for innovation, our team values agility, collaboration, and improvement.
-        Our vision is to empower businesses and individuals by transforming ideas into impactful experiences.
+        Our vision is to empower businesses and individuals by transforming ideas into impactful experiences,
+          by empowering the digital frontier with full Stack excellence.
     </p>
   </div>
 </section>
@@ -121,6 +177,7 @@
                     <button type="submit">Submit</button>
                 </form>
                 <div class="contact-info">
+                    <img src="images/Untitled design (16).png" alt="FTR Development Logo" class="footer-logo">
                     <p><strong>Email:</strong> ftrdevelopment9@gmail.com</p>
                     <p><strong>Phone:</strong> (587) 930-0994</p>
                     <p><strong>Address:</strong> Edmonton Alberta, T5W 4H6</p>
@@ -175,7 +232,19 @@ form.addEventListener("submit", (e) => {
             document.body.appendChild(snowflake);
           }
         });
-      </script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  });
+      
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js");
+  }
+</script>
+
       <script src="javaMain/profile.js" ></script>
 </body>
 </html>
