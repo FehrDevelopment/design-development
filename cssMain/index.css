@@ -7,21 +7,103 @@ body, html {
     box-sizing: border-box;
     
 }
+/* Base header */
+/* Header container */
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+
+  color: #fff;
+  z-index: 1000;
+  padding: 0.5rem;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  color:goldenrod;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Nav links hidden by default */
+/* Hide nav links by default */
+.nav-links {
+  list-style: none;
+  margin: 8px;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  position: absolute;
+  top: 80px; left: 0;
+  width: 200px;
+}
+
+/* Expanded state */
+.nav-links.open {
+  max-height: 500px;
+  padding: 0.5rem 0;
+}
+
+.nav-links li {
+  text-align: left;
+    margin: 0;
+    padding: 22px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.nav-links a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  background: rgb(19, 91, 125);
+}
+
+
+
+/* Logo */
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Hamburger button */
+
 
 header {
-    max-width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    max-width: 90%;
+
+    color: rgb(239, 58, 58);
     padding: .5rem 0;
     position: fixed;
     top: 0;
-    left: 0;
+   
     z-index: 1000;
     transition: top 0.4s ease;
 }
-header.hidden{
-    top:-100px;
-}
+
 body {
     margin: 0; /* Remove default margin to ensure the slideshow starts at the top */
     padding: 0;
@@ -31,19 +113,21 @@ body {
   
 
 .container {
-    display: flex;
+    display:grid;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 800px;
+    
+    
     
 }
 
 nav {
     flex-grow: 1;
-    width: 115%;
-    justify-content: flex-start;
+    width: 90%;
+    justify-content:end;
     
     
 }
@@ -57,8 +141,7 @@ nav {
 
 
 nav ul {
-  display: flex;
-  flex-direction: row;   /* force horizontal */
+  /* force horizontal */
   flex-wrap: nowrap;     /* prevent wrapping */
   justify-content: space-around; /* spread items */
 }
@@ -79,6 +162,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+.Tiggle-navagation {
+    display: none;
+    background-color: yellow;
+
 }
 
 
@@ -131,7 +219,7 @@ nav ul li a {
 .hero-content p {
   font-size: 4rem;
   overflow: hidden;
-  border-right: .15em solid #333;
+  
   white-space: nowrap;
   width: 0;
   animation: typing 4s steps(60, end) forwards, blink 1s step-end infinite;
@@ -219,7 +307,7 @@ nav ul li a {
 
 #fancy-bio {
     background-color: linear-gradient(to right, #f4f4f9, #d9d9e3);
-    padding: 50px 0;
+    padding: 20px;
     font-family: 'Arial', sans-serif;
 } 
 
@@ -313,8 +401,9 @@ nav ul li a {
 .mission-content p {
   margin-bottom: 15px;
   line-height: 1.8;
-  font-size: 20px;
-  color: #000
+  font-size: 26px;
+  color: #610909;
+  font-weight:300;
 }
 
 
@@ -370,6 +459,7 @@ strong {
     color: #f6fafc;
     margin-bottom: 20px;
     line-height: 1.7;
+    margin-left: 20px;
 }
 .image-container {
     background: rgba(0, 0, 0, 0.5);
@@ -416,27 +506,32 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin:  9px;
+
     border-radius: 10px;
-    overflow: hidden;
+    
+    padding-right: 130px;
+
 }
 
 .bio-image {
     flex: 1;
-    max-width: 250px;
+    max-width: -440px;
+    
 }
 
 .bio-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 90px;
+    max-width:fit-content;
+    height:1000px;
+    border-radius: 40px;
+    margin-top: -500px;
 }
 
 .bio-content {
-    flex: 2;
-    padding: 20px 30px;
+    flex: 1;
+    padding: 20px;
+    margin-right: -160px;
     background-color: #fff;
 }
 
@@ -452,7 +547,6 @@ strong {
     text-align: center;
      text-shadow: 50 50 70px rgb(10, 1, 1), 0 0 70px rgb(20, 1, 1);
   animation: pulseGlow 1s infinite alternate;
-  border-radius: 8px;
 }
 
 .bio-content p {
@@ -575,7 +669,7 @@ body::before {
 input, textarea {
     font-size: 1em;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #950909;
     border-radius: 4px;
 }
 
@@ -593,16 +687,45 @@ button:hover {
     background-color: #2980b9;
 }
 
+
+
+#moving-image {
+  transition: transform 0.2s ease-out;
+  position: relative;
+}
 .contact-info {
-    margin-top: 20px;
-    text-align: center;
+    background: #efefeb;              /* teal background */
+  color: #fff;                    /* clean white text */
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  
+  margin: 2rem auto;              /* centers the whole block */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.contact-info .footer-logo {
+  width: 240px;
+  height: 200px;;
+  color:#00aaff;
+  margin-bottom: 0.5rem;
+  background-color:#1380dab4;
+  border-radius: 12px;
+    filter: drop-shadow(0 0 6px rgba(240, 14, 14, 0.853));
 }
 
 .contact-info p {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 10px;
+  margin: 0.5rem 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: black;
 }
+
+.contact-info strong {
+  color: #00aaff;                 /* accent color for labels */
+  font-weight: 600;
+}
+
 
 
 @keyframes snowflakes-fall {
@@ -647,7 +770,7 @@ button:hover {
 }
 
 .thank-you-box {
-  background-color: #008080;
+  background-color: #051212;
   color: #fff;
   padding: 20px 40px;
   border-radius: 12px;
@@ -683,10 +806,7 @@ button:hover {
     max-width: 250px;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   nav ul li {
     margin: 10px 0;
@@ -735,7 +855,7 @@ button:hover {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .logo {
@@ -805,6 +925,8 @@ button:hover {
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    align-items: center;
+
   }
 }
 @media (max-width: 768px) {
@@ -815,123 +937,6 @@ button:hover {
 }
 
 
-/* UNIVERSAL MOBILE FIX — CLEAN + CONSISTENT */
-@media (max-width: 768px) {
-
-  /* HEADER + NAV */
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin: 0;
-    padding: 8px 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* LOGO */
-  .logo,
-  .logo-image {
-    position: static;
-    margin: 0 auto 1rem;
-    width: 150px;
-    height: auto;
-  }
-
-  /* HERO */
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.5rem;
-    width: 100%;
-    white-space: normal;
-    border-right: none;
-    animation: none;
-  }
-
-  .see-more-button {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  /* MISSION SECTION */
-  .mission-wrapper {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .mission-content h2 {
-    font-size: 2rem;
-  }
-
-  .mission-content p {
-    font-size: 1rem;
-  }
-
-  /* BIO SECTION */
-  .bio-container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .bio-content h2 {
-    font-size: 2rem;
-  }
-
-  .bio-content p {
-    font-size: 1rem;
-  }
-
-  /* BLOG */
-  .main-blog h2 {
-    font-size: 1.8rem;
-  }
-
-  .main-blog h3 {
-    font-size: 1.3rem;
-  }
-
-  /* CONTACT */
-  .container-4 {
-    padding: 20px;
-  }
-
-  .container-4 h2 {
-    font-size: 1.8rem;
-  }
-
-  .container-4 p {
-    font-size: 1rem;
-  }
-
-  /* BUTTONS */
-  button,
-  .btn {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-
-  /* GENERAL */
-  body {
-    overflow-x: hidden;
-  }
-}
 
 
 
