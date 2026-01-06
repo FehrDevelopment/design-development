@@ -7,6 +7,10 @@
   max-width: 1200px;
   margin: auto;
 }
+.services-page {
+  padding-top: 80px;
+}
+
 
 li:hover {
   color: #0077cc; /* change to a blue shade on hover */
@@ -208,6 +212,9 @@ section.services {
    TABLETS & MOBILE (≤768px)
    ============================ */
 @media (max-width: 768px) {
+    body {
+    padding-top: 100px;
+    }
 
   /* HEADER */
   header {
@@ -302,4 +309,3 @@ section.services {
     padding: 0.6rem 1rem;
   }
 }
-
