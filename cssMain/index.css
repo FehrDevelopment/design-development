@@ -109,7 +109,7 @@ header .container {
 
 
 header {
-    max-width: 90%;
+    
 
     color: rgb(239, 58, 58);
     padding: .5rem 0;
@@ -129,7 +129,7 @@ body {
   
 
 .container {
-    display:grid;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
@@ -191,6 +191,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
 }
+
 
 
 
@@ -533,15 +534,15 @@ strong {
 
 .bio-image {
     flex: 1;
-    max-width: -440px;
+    max-width: 100%;
     
 }
 
 .bio-image img {
-    max-width:fit-content;
-    height:1000px;
+    width: 100%;
+    height: auto;
     border-radius: 40px;
-    margin-top: -500px;
+    margin-top: 0;
 }
 
 .bio-content {
@@ -942,9 +943,102 @@ button:hover {
     padding: 0.6rem 1rem;
   }
 }
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-info .footer-logo {
+    width: 150px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .bio-container {
+    padding-right: 0;
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  .bio-image img {
+    margin-top: 0;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .main-blog p {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .mission-image img {
+    max-height: 300px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .mission-content h2 {
+    font-size: 2rem;
+    transform: none;
+  }
+}
+@media (max-width: 768px) {
+  .mission-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-1 {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  nav ul li {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+}
+
+
+
+
 
   
   
+
 
 
 
