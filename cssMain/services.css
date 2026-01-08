@@ -284,13 +284,17 @@ section.services {
     padding: 0;
     overflow-x: hidden;
   }
-}
+
 
 
 /* ============================
    SMALL PHONES (≤480px)
    ============================ */
 @media (max-width: 480px) {
+    .modal-content {
+        margin: 20% auto;
+    }
+  }
 
   .card {
     padding: 1rem;
@@ -307,5 +311,10 @@ section.services {
   .btn {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo-image {
+    width: 120px;
   }
 }
