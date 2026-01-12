@@ -839,6 +839,39 @@ button:hover {
     min-height: auto;
   }
 
+/* INTRODUCTION MOBILE FIXES */
+#Introduction,
+#fancy-bio,
+.bio-container,
+.bio-content {
+  width: 100%;
+  max-width: 650px;       /* keeps text readable */
+  margin: 0 auto;         /* centers the whole section */
+  padding: 20px;          /* adds breathing room */
+  box-sizing: border-box;
+}
+
+.bio-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.bio-content p {
+  font-size: 1rem;
+  line-height: 1.7;       /* improves readability */
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.bio-image img {
+  width: 100%;
+  max-width: 250px;       /* prevents giant image */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
   /* Header + Logo */
   header {
     flex-direction: column;
@@ -1020,8 +1053,6 @@ button:hover {
     height: auto;
   }
 }
-
-
 
 
 
