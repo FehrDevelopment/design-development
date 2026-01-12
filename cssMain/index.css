@@ -15,8 +15,7 @@ header {
   left: 0;
   width: 100%;
   color: #fff;
-  z-index: 1000;
-  padding: 0.5rem;
+
 }
 
 header .container {
@@ -84,21 +83,6 @@ header .container {
   background: rgb(19, 91, 125);
 }
 
-/* Mobile layout */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-}
-
-
-
-
 /* Logo */
 .logo {
   font-size: 1.25rem;
@@ -124,6 +108,35 @@ body {
     margin: 0; /* Remove default margin to ensure the slideshow starts at the top */
     padding: 0;
   }
+  .intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.intro-image img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.intro-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
 
 
   
@@ -160,6 +173,7 @@ nav ul {
   /* force horizontal */
   flex-wrap: nowrap;     /* prevent wrapping */
   justify-content: space-around; /* spread items */
+  display: flex;
 }
 
 nav li {
@@ -817,6 +831,12 @@ button:hover {
     width: 100%;
     padding: 20px;
     text-align: center;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .container-1 {
+    min-height: auto;
   }
 
   /* Header + Logo */
@@ -833,31 +853,43 @@ button:hover {
     margin-bottom: 1rem;
   }
 
-.logo-image {
-    width: 250px;
+  .logo-image {
+    margin: 0 auto;
+    width: 150px;
     height: auto;
-    margin: 0 auto 20px auto;   /* centers it */
-    display: block;
-}
-
+  }
 
   /* Navigation */
   nav ul {
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   nav ul li {
     margin: 10px 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
   }
 
   /* Hero Section */
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .hero-text {
+    font-size: 60px;
   }
 
   .see-more-button {
@@ -872,10 +904,36 @@ button:hover {
     padding: 20px;
   }
 
+  .bio-image img {
+    margin-top: 0;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+  }
+
   /* Blog */
   .main-blog h2,
   .main-blog h3 {
     font-size: 1.5em;
+  }
+
+  .main-blog p {
+    margin-left: 0;
+  }
+
+  /* Mission Section */
+  .mission-image img {
+    max-height: 300px;
+    height: auto;
+  }
+
+  .mission-content h2 {
+    font-size: 2rem;
+    transform: none;
+  }
+
+  .mission-content p {
+    font-size: 18px;
   }
 
   /* Services Section */
@@ -942,102 +1000,17 @@ button:hover {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
   }
-}
-@media (max-width: 768px) {
-  .hero-text {
-    font-size: 60px;
-  }
-}
 
-@media (max-width: 480px) {
   .hero-text {
     font-size: 40px;
   }
-}
-@media (max-width: 480px) {
+
   .contact-info .footer-logo {
     width: 150px;
     height: auto;
   }
 }
-@media (max-width: 768px) {
-  .bio-container {
-    padding-right: 0;
-    margin-right: 0;
-    flex-direction: column;
-  }
 
-  .bio-image img {
-    margin-top: 0;
-    max-height: 300px;
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 768px) {
-  .main-blog p {
-    margin-left: 0;
-  }
-}
-@media (max-width: 768px) {
-  .mission-image img {
-    max-height: 300px;
-    height: auto;
-  }
-}
-@media (max-width: 768px) {
-  .mission-content h2 {
-    font-size: 2rem;
-    transform: none;
-  }
-}
-@media (max-width: 768px) {
-  .mission-content p {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container-1 {
-    min-height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media (max-width: 768px) {
-  nav ul li {
-    margin-right: 0;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo-image {
-    margin: 0 auto;
-    width: 150px;
-    height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 60px 20px;
-  }
-}
-
-
-
-
-
-  
-  
 
 
 
