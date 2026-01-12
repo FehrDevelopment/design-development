@@ -889,7 +889,7 @@ button:hover {
   }
 
   .hero-text {
-    font-size: 60px;
+    font-size: 55px;
   }
 
   .see-more-button {
@@ -903,6 +903,16 @@ button:hover {
   .bio-content {
     padding: 20px;
   }
+ 
+  .bio-container,
+  .introduction {
+    padding: 20px;
+    max-width: 100%;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+
 
   .bio-image img {
     margin-top: 0;
@@ -1010,7 +1020,6 @@ button:hover {
     height: auto;
   }
 }
-
 
 
 
