@@ -1,3 +1,4 @@
+
 /* Services & Packages Section */
 .services {
   display: grid;
@@ -48,7 +49,7 @@ footer {
 
 .footer-note {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem;
   background-color: #1f2d3a;
   color: #1c60e6;
   border-top: 3px solid #00cc30;
@@ -93,6 +94,7 @@ header h1 {
   height: 350px; 
   margin-left: -100px;  /* keep aspect ratio */
   align-items: center;
+  filter: drop-shadow(0 0 6px rgba(40, 240, 14, 0.679));
 }
 
 .logo {
